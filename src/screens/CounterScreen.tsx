@@ -10,7 +10,7 @@ import { DrawerParamList } from '../types/navigationTypes'
 
 type CounterScreenProps = DrawerScreenProps<DrawerParamList, 'Counter'>
 
-export const CounterScreen = (props: CounterScreenProps) => {
+export const CounterScreen: React.FC<CounterScreenProps> = () => {
 
     return (
         <Container>
