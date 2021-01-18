@@ -20,14 +20,20 @@ export const FormScreen: React.FC<FormScreenProps> = () => {
             <AddForm />
 
             <FormButton label="Open modal" onPress={() => setModalVisible(true)} />
-            <Modal transparent visible={modalVisible} animationType="fade" onRequestClose={() => setModalVisible(false)}>
+            <Modal transparent visible={modalVisible} animationType="slide" onRequestClose={() => setModalVisible(false)}>
                 <Box justifyContent="center" alignItems="center" flex={1}>
                     <Box
-                        borderWidth={1}
-                        borderColor="gray"
                         height={lengths.largeBox}
                         width={lengths.largeBox} 
                         backgroundColor="secondaryBackground"
+                        borderRadius={lengths.border}
+                        shadowColor="shadow"
+                        shadowOffset={{
+                            width: 0,
+                            height: 1
+                        }}
+                        shadowRadius={2}
+                        shadowOpacity={0.1}
                         padding="m">
                         <Text variant="subHeader">Modal</Text>
                         <Box flex={1} />

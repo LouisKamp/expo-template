@@ -17,7 +17,7 @@ export const FormInput: React.FC<Props> = ({ label, errors, ...rest }) => {
                     <Text>{label}</Text>
                 )}
             </Box>
-            <TextInput variant="box" {...rest} />
+            <TextInput variant={errors ? 'error' : 'box'} {...rest} />
         </Box>
     ) 
 }

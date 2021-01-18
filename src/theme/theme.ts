@@ -9,8 +9,9 @@ export const theme = createTheme({
         mainText: colors.black,
         action: colors.purpleDark,
         error: colors.red,
-        gray: colors.gray, 
-        secondaryBackground: colors.lightGray
+        border: colors.gray, 
+        secondaryBackground: colors.pureWhite,
+        shadow: colors.black
     },
     spacing: {
         s: lengths.small,
@@ -55,7 +56,27 @@ export const theme = createTheme({
             padding: 'input',
             borderWidth: 1,
             backgroundColor: 'mainBackground',
-            borderColor: 'gray',
+            borderColor: 'border',
+            shadowColor: 'shadow',
+            shadowOffset: {
+                width: 0,
+                height: 1,
+            },
+            shadowRadius: 0,
+            shadowOpacity: 0.3
+        },
+        error: {
+            padding: 'input',
+            borderWidth: 1,
+            backgroundColor: 'mainBackground',
+            borderColor: 'error',
+            shadowColor: 'error',
+            shadowOffset: {
+                width: 0,
+                height: 1,
+            },
+            shadowRadius: 0,
+            shadowOpacity: 0.3
         }
     },
     formButtonVariants: {
@@ -84,9 +105,10 @@ export const darkTheme: Theme = {
         ...theme.colors,
         mainBackground: colors.black,
         mainText: colors.white,
+        secondaryBackground: colors.midnightGray,
         action: colors.purpleLight,
-        // gray: colors.darkGray,
-        secondaryBackground: colors.darkGray
+        border: colors.darkGray,
+        shadow: colors.pureWhite
     },
 }
 

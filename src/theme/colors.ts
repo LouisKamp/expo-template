@@ -8,11 +8,13 @@ export const colors = {
     greenDark: '#0A906E',
 
     black: '#0B0B0B',
+    pureWhite: '#FFF',
     white: '#F0F2F3',
 
     red: '#FF0000',
 
-    gray: '#6e6e6e',
-    lightGray: '#dbdbdb',
-    darkGray: '#3b3b3b'
+    gray: '#8f8f8f',
+    lightGray: '#ededed',
+    darkGray: '#3b3b3b',
+    midnightGray: '#212121',
 }
