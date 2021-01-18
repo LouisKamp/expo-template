@@ -1,9 +1,12 @@
-import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native'
+import {
+    DarkTheme, DefaultTheme, NavigationContainer,  
+} from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
 import { useColorScheme } from 'react-native-appearance'
 
 import { NotFoundScreen } from '../screens/NotFoundScreen'
+import { PushScreen } from '../screens/PushScreen'
 import { RootStackParamList } from '../types/navigationTypes'
 import { DrawerNavigator } from './DrawerNavigator'
 import { linkingConfiguration } from './linkingConfiguration'
@@ -28,6 +31,7 @@ function RootNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Root" component={DrawerNavigator} />
+            <Stack.Screen name="Push" component={PushScreen} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
         </Stack.Navigator>
     )

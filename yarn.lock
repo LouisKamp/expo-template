@@ -1559,6 +1559,25 @@
     query-string "^6.13.6"
     react-is "^16.13.0"
 
+"@react-navigation/core@^5.15.0":
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.15.0.tgz#fbec78a0b4c6e2f29e13a7cf7a86e83279fb5213"
+  integrity sha512-JesS2jRn6CC7ITzGaulZBVq7Z1EhFzT/9vXSFodJ1wDtprDJHLSjvPLuPcSw1dx9/1DRXj4iCeCBTIlDpNWJeA==
+  dependencies:
+    "@react-navigation/routers" "^5.7.0"
+    escape-string-regexp "^4.0.0"
+    nanoid "^3.1.15"
+    query-string "^6.13.6"
+    react-is "^16.13.0"
+
+"@react-navigation/devtools@^5.1.19":
+  version "5.1.19"
+  resolved "https://registry.yarnpkg.com/@react-navigation/devtools/-/devtools-5.1.19.tgz#e5bd3b72adcad48b4c75dba418127d0dbedb96de"
+  integrity sha512-a5WKjv9hGTdqPoysTWCeppPH1HN7/5VyqKyUsRAsORizSxTnTtqgG+juUku1N+JG4u6Ajff2jlMtT9vqV3ZQJQ==
+  dependencies:
+    "@react-navigation/core" "^5.15.0"
+    deep-equal "^2.0.4"
+
 "@react-navigation/drawer@^5.11.4":
   version "5.11.4"
   resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-5.11.4.tgz#8cc4c6ccd2579e78ee1d84948e2eedb2aff9d891"
@@ -1580,6 +1599,13 @@
   version "5.6.2"
   resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-5.6.2.tgz#accc008c3b777f74d998e16cb2ea8e4c1fe8d9aa"
   integrity sha512-XBcDKXS5s4MaHFufN44LtbXqFDH/nUHfHjbwG85fP3k772oRyPRgbnUb2mbw5MFGqORla9T7uymR6Gh6uwIwVw==
+  dependencies:
+    nanoid "^3.1.15"
+
+"@react-navigation/routers@^5.7.0":
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-5.7.0.tgz#fb780d60f5cba9206ed402f271c10986f921d68f"
+  integrity sha512-Du1OsLtEF2EEWo7GeFNoBRBi4aX4eHdFQXztNxeL/N3Gl3f8wc6Ys0XTWHgWlWQIspqOfup5YF3WQcLArunjvg==
   dependencies:
     nanoid "^3.1.15"
 
@@ -3015,7 +3041,7 @@ deep-assign@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
-deep-equal@^2.0.3:
+deep-equal@^2.0.3, deep-equal@^2.0.4:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-2.0.5.tgz#55cd2fe326d83f9cbf7261ef0e060b3f724c5cb9"
   integrity sha512-nPiRgmbAtm1a3JsnLCf6/SLfXcjyN5v8L1TXzdCmHrXJ4hx+gW/w1YCcn7z8gJtSiDArZCgYtbao3QqLm/N1Sw==

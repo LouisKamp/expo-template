@@ -10,6 +10,12 @@ export const linkingConfiguration = {
                     Form: 'form'
                 },
             },
+            Push: {
+                path: 'push/:count',
+                parse: {
+                    count: (count: string) => parseInt(count, 10),
+                },
+            },
             NotFound: '*',
         },
     },

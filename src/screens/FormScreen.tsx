@@ -1,4 +1,6 @@
-import { DrawerScreenProps } from '@react-navigation/drawer'
+import { DrawerNavigationProp } from '@react-navigation/drawer'
+import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 import React, { useState } from 'react'
 import { Modal } from 'react-native'
 
@@ -8,11 +10,24 @@ import { FormButton } from '../components/atoms/FormButton'
 import { Text } from '../components/atoms/Text'
 import { AddForm } from '../components/molecule/AddForm'
 import { lengths } from '../theme/lengths'
-import { DrawerParamList } from '../types/navigationTypes'
+import { DrawerParamList, RootStackParamList } from '../types/navigationTypes'
 
-type FormScreenProps = DrawerScreenProps<DrawerParamList, 'Form'>
+type ScreenNavigationProp = CompositeNavigationProp<
+    DrawerNavigationProp<DrawerParamList, 'Form'>,
+    CompositeNavigationProp<
+        StackNavigationProp<RootStackParamList>,
+        DrawerNavigationProp<DrawerParamList>
+    >
+>
 
-export const FormScreen: React.FC<FormScreenProps> = () => {
+type ScreenRouteProp = RouteProp<DrawerParamList, 'Form'>
+
+type Props = {
+    route: ScreenRouteProp
+    navigation: ScreenNavigationProp
+}
+
+export const FormScreen: React.FC<Props> = () => {
     const [modalVisible, setModalVisible] = useState(false)
     return (
         <Container>
