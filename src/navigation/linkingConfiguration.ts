@@ -6,7 +6,8 @@ export const linkingConfiguration = {
         screens: {
             Root: {
                 screens: {
-                    Counter: 'counter'
+                    Counter: 'counter',
+                    Form: 'form'
                 },
             },
             NotFound: '*',

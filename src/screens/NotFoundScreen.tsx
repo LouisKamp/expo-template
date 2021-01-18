@@ -11,10 +11,10 @@ type NotFoundScreenProps = StackScreenProps<RootStackParamList, 'NotFound'>
 export const NotFoundScreen: React.FC<NotFoundScreenProps> = () => {
     return (
         <Box flex={1} backgroundColor="mainBackground" alignItems="center" justifyContent="center" padding="l">
-            <Text fontSize={20} fontWeight="bold">This screen doesn&apos;t exist.</Text>
+            <Text variant="subHeader">This screen doesn&apos;t exist.</Text>
             <Box marginTop="l">
                 <Link to="/counter">
-                    <Text fontWeight="bold" color="action">Go back to home</Text>
+                    <Text variant="link">Go back to home</Text>
                 </Link>
             </Box>
         </Box>

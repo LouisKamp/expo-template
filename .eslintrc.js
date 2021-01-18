@@ -74,6 +74,7 @@ module.exports = {
         'comma-dangle': 'off',
         'no-trailing-spaces': 'off',
         'react/jsx-closing-bracket-location': [1, 'after-props'],
-        'no-useless-constructor': 'off'
+        'no-useless-constructor': 'off',
+        'react/require-default-props': [0]
     }
 }

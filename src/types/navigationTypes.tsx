@@ -1,8 +1,9 @@
 export type RootStackParamList = {
-  Root: undefined;
-  NotFound: undefined;
+  Root: undefined
+  NotFound: undefined
 };
 
 export type DrawerParamList = {
-  Counter: undefined;
-};
+  Counter: undefined
+  Form: undefined
+}
