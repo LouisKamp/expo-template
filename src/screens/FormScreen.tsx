@@ -1,6 +1,5 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
 import React, { useState } from 'react'
 import { Modal } from 'react-native'
 
@@ -10,17 +9,16 @@ import { FormButton } from '../components/atoms/FormButton'
 import { Text } from '../components/atoms/Text'
 import { AddForm } from '../components/molecule/AddForm'
 import { lengths } from '../theme/lengths'
-import { DrawerParamList, RootStackParamList } from '../types/navigationTypes'
+import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
+
+type ParamList = DrawerParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<DrawerParamList, 'Form'>,
-    CompositeNavigationProp<
-        StackNavigationProp<RootStackParamList>,
-        DrawerNavigationProp<DrawerParamList>
-    >
+    DrawerNavigationProp<ParamList, 'Form'>,
+    CompositeNavType
 >
 
-type ScreenRouteProp = RouteProp<DrawerParamList, 'Form'>
+type ScreenRouteProp = RouteProp<ParamList, 'Animation'>
 
 type Props = {
     route: ScreenRouteProp

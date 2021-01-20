@@ -1,22 +1,20 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 
 import { Box } from '../components/atoms/Box'
 import { Container } from '../components/atoms/Container'
 import { Text } from '../components/atoms/Text'
-import { DrawerParamList, RootStackParamList } from '../types/navigationTypes'
+import { CompositeNavType, RootStackParamList } from '../types/navigationTypes'
+
+type ParamList = RootStackParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<RootStackParamList, 'Push'>,
-    CompositeNavigationProp<
-        StackNavigationProp<RootStackParamList>,
-        DrawerNavigationProp<DrawerParamList>
-    >
+    DrawerNavigationProp<ParamList, 'Push'>,
+    CompositeNavType
 >
 
-type ScreenRouteProp = RouteProp<RootStackParamList, 'Push'>
+type ScreenRouteProp = RouteProp<ParamList, 'Push'>
 
 type Props = {
     route: ScreenRouteProp

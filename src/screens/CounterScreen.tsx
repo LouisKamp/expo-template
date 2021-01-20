@@ -1,7 +1,9 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
-import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
+import {
+    CompositeNavigationProp, Link, RouteProp, useNavigation 
+} from '@react-navigation/native'
 import React from 'react'
+import { Platform } from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useSelector } from 'react-redux'
 
@@ -11,17 +13,16 @@ import { Text } from '../components/atoms/Text'
 import { CountButton } from '../components/molecule/CountButton'
 import { DisplayCount } from '../components/molecule/DisplayCount'
 import { RootState } from '../state'
-import { DrawerParamList, RootStackParamList } from '../types/navigationTypes'
+import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
+
+type ParamList = DrawerParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<DrawerParamList, 'Counter'>,
-    CompositeNavigationProp<
-        StackNavigationProp<RootStackParamList>,
-        DrawerNavigationProp<DrawerParamList>
-    >
+    DrawerNavigationProp<ParamList, 'Counter'>,
+    CompositeNavType
 >
 
-type ScreenRouteProp = RouteProp<DrawerParamList, 'Counter'>
+type ScreenRouteProp = RouteProp<ParamList, 'Counter'>
 
 type Props = {
     route: ScreenRouteProp
@@ -30,6 +31,7 @@ type Props = {
 
 export const CounterScreen: React.FC<Props> = ({ navigation }) => {
     const count = useSelector((state: RootState) => state.count)
+    const nav = useNavigation<ScreenNavigationProp>()
     return (
         <Container>
             <Text variant="subHeader">CounterPage</Text>
@@ -37,9 +39,20 @@ export const CounterScreen: React.FC<Props> = ({ navigation }) => {
                 <DisplayCount />
                 <CountButton/>
                 <Box marginVertical="l">
-                    <TouchableHighlight onPress={() => navigation.navigate('Push', { count })}>
-                        <Text variant="link">Link to nowhere</Text>
-                    </TouchableHighlight>
+                    {(Platform.OS !== 'web') ? (
+                        <TouchableHighlight onPress={() => nav.push('Push', { count: 10 })}>
+                            <Text variant="link">Link to nowhere</Text>
+                        </TouchableHighlight>
+                    ) : (
+                        <>
+                            <Link to={`/push/${count}`}>
+                                <Text variant="link">Link to push</Text>
+                            </Link>
+                            <Link to="/nowhere">
+                                <Text variant="link">Link to nowhere</Text>
+                            </Link>
+                        </>
+                    )}
                 </Box>
             </Box>
         </Container>
