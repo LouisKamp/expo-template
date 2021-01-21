@@ -1,11 +1,13 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
 import React from 'react'
-import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated'
+import { PanGestureHandler, PanGestureHandlerGestureEvent } from 'react-native-gesture-handler'
+import Animated, {
+    useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring 
+} from 'react-native-reanimated'
 
 import { Box } from '../components/atoms/Box'
 import { Container } from '../components/atoms/Container'
-import { FormButton } from '../components/atoms/FormButton'
 import { Text } from '../components/atoms/Text'
 import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
 
@@ -27,24 +29,41 @@ export const AnimationScreen: React.FC<Props> = ({ route }) => {
 
     // https://docs.swmansion.com/react-native-reanimated/
     
-    const offset = useSharedValue(0)
+    const x = useSharedValue(0)
 
-    const animatedStyles = useAnimatedStyle(() => {
+    const gestureHandler = useAnimatedGestureHandler<PanGestureHandlerGestureEvent, {startX: number}>({
+        onStart: (_, ctx) => {
+            ctx.startX = x.value
+        },
+        onActive: (event, ctx) => {
+            x.value = ctx.startX + event.translationX
+        },
+        onEnd: (_) => {
+            x.value = withSpring(0)
+        },
+    })
+    
+    const animatedStyle = useAnimatedStyle(() => {
         return {
-            transform: [{ translateX: offset.value * 255 }],
+            transform: [
+                {
+                    translateX: x.value,
+                },
+            ],
         }
     })
 
-    const handlePress = () => {
-        offset.value = withSpring(Math.random())
+    const handler = (e:any) => {
+        // console.log(e)
     }
 
     return (
         <Container>
             <Text variant="subHeader">Push Screen</Text>
             <Box marginTop="m">
-                <Animated.View style={[{ height: 20, width: 20, backgroundColor: 'blue' }, animatedStyles]} />
-                <FormButton onPress={handlePress} label="Move" />
+                <PanGestureHandler minDist={3} onGestureEvent={gestureHandler}>
+                    <Animated.View style={[{ height: 20, width: 20, backgroundColor: 'blue' }, animatedStyle]} />
+                </PanGestureHandler>
             </Box>
         </Container>
     )
