@@ -6,10 +6,10 @@ import Animated, {
     useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring 
 } from 'react-native-reanimated'
 
-import { Box } from '../components/atoms/Box'
-import { Container } from '../components/atoms/Container'
-import { Text } from '../components/atoms/Text'
-import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
+import { Box } from '../../../components/atoms/Box'
+import { Container } from '../../../components/atoms/Container'
+import { Text } from '../../../components/atoms/Text'
+import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
 
 type ParamList = DrawerParamList
 

@@ -3,13 +3,13 @@ import { CompositeNavigationProp, RouteProp } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { Modal } from 'react-native'
 
-import { Box } from '../components/atoms/Box'
-import { Container } from '../components/atoms/Container'
-import { FormButton } from '../components/atoms/FormButton'
-import { Text } from '../components/atoms/Text'
-import { AddForm } from '../components/molecule/AddForm'
-import { lengths } from '../theme/lengths'
-import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
+import { Box } from '../../../components/atoms/Box'
+import { Container } from '../../../components/atoms/Container'
+import { FormButton } from '../../../components/atoms/FormButton'
+import { Text } from '../../../components/atoms/Text'
+import { AddForm } from '../../../components/organism/AddForm'
+import { lengths } from '../../../theme/lengths'
+import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
 
 type ParamList = DrawerParamList
 

@@ -1,13 +1,8 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { AppearanceProvider } from 'react-native-appearance'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { Provider } from 'react-redux'
 
-import { DarkModeHandler } from './src/components/organism/DarkModeHandler'
+import { Providers } from './src/components/utils/Providers'
 import useCachedResources from './src/hooks/useCachedResources'
-import { Navigation } from './src/navigation'
-import { store } from './src/state'
+import { RootNavigator } from './src/navigation'
 
 const App = () => {
     const isLoadingComplete = useCachedResources()
@@ -16,16 +11,9 @@ const App = () => {
         return null
     } else {
         return (
-            <Provider store={store}>
-                <AppearanceProvider>
-                    <SafeAreaProvider>
-                        <DarkModeHandler>
-                            <Navigation />
-                        </DarkModeHandler>
-                        <StatusBar />
-                    </SafeAreaProvider>
-                </AppearanceProvider>
-            </Provider>
+            <Providers>
+                <RootNavigator />
+            </Providers>
         )
     }
 }

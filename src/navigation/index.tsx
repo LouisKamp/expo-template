@@ -11,7 +11,7 @@ import { RootStackParamList } from '../types/navigationTypes'
 import { DrawerNavigator } from './DrawerNavigator'
 import { linkingConfiguration } from './linkingConfiguration'
 
-export const Navigation = () => {
+export const Navigation:React.FC = ({ children }) => {
 
     const colorScheme = useColorScheme()
 
@@ -19,7 +19,7 @@ export const Navigation = () => {
         <NavigationContainer
             linking={linkingConfiguration}
             theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-            <RootNavigator />
+            {children}
         </NavigationContainer>
     )
 
@@ -27,7 +27,7 @@ export const Navigation = () => {
 
 const Stack = createStackNavigator<RootStackParamList>()
 
-function RootNavigator() {
+export const RootNavigator:React.FC = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Root" component={DrawerNavigator} />

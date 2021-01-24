@@ -7,13 +7,13 @@ import { Platform } from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useSelector } from 'react-redux'
 
-import { Box } from '../components/atoms/Box'
-import { Container } from '../components/atoms/Container'
-import { Text } from '../components/atoms/Text'
-import { CountButton } from '../components/molecule/CountButton'
-import { DisplayCount } from '../components/molecule/DisplayCount'
-import { RootState } from '../state'
-import { CompositeNavType, DrawerParamList } from '../types/navigationTypes'
+import { Box } from '../../../components/atoms/Box'
+import { Container } from '../../../components/atoms/Container'
+import { Text } from '../../../components/atoms/Text'
+import { CountButton } from '../../../components/molecule/CountButton'
+import { DisplayCount } from '../../../components/molecule/DisplayCount'
+import { RootState } from '../../../state'
+import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
 
 type ParamList = DrawerParamList
 
