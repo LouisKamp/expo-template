@@ -1,20 +1,10 @@
 export const colors = {
-    purpleLight: '#8C6FF7',
-    purplePrimary: '#5A31F4',
-    purpleDark: '#3F22AB',
-
-    greenLight: '#56DCBA',
-    greenPrimary: '#0ECD9D',
-    greenDark: '#0A906E',
-
-    black: '#0B0B0B',
-    pureWhite: '#FFF',
-    white: '#F0F2F3',
-
-    red: '#FF0000',
-
-    gray: '#8f8f8f',
-    lightGray: '#ededed',
-    darkGray: '#3b3b3b',
-    midnightGray: '#212121',
+    richBlack: '#0B090A',
+    eerieBlack: '#161A1D',
+    imperialRed: '#E5383B',
+    maximumRed: '#D71D24',
+    pureWhite: '#FFFFFF',
+    cultured: '#F5F3F4',
+    lightGray: '#D3D3D3',
+    davysGray: '#8F8F8F'
 }

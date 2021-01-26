@@ -5,13 +5,13 @@ import { lengths } from './lengths'
 
 export const theme = createTheme({
     colors: {
-        mainBackground: colors.white,
-        mainText: colors.black,
-        action: colors.purpleDark,
-        error: colors.red,
-        border: colors.gray, 
-        secondaryBackground: colors.pureWhite,
-        shadow: colors.black
+        mainBackground: colors.pureWhite,
+        mainText: colors.richBlack,
+        secondaryText: colors.davysGray,
+        action: colors.eerieBlack,
+        error: colors.imperialRed,
+        border: colors.davysGray, 
+        shadow: colors.lightGray
     },
     spacing: {
         s: lengths.small,
@@ -26,7 +26,18 @@ export const theme = createTheme({
     },
     textVariants: {
         defaults: {
-            color: 'mainText'
+            color: 'mainText',
+        },
+        header: {
+            fontSize: 25,
+            fontWeight: 'bold',
+        },
+        subHeader: {
+            fontSize: 20,
+            fontWeight: 'bold',
+        },
+        info: {
+            color: 'secondaryText'
         },
         buttonLabel: {
             color: 'action'
@@ -38,10 +49,6 @@ export const theme = createTheme({
             color: 'action',
             fontWeight: 'bold'
         },
-        subHeader: {
-            fontSize: 20,
-            fontWeight: 'bold'
-        }
     },
     inputVariants: {
         defaults: {
@@ -63,7 +70,7 @@ export const theme = createTheme({
                 height: 1,
             },
             shadowRadius: 0,
-            shadowOpacity: 0.3
+            shadowOpacity: 0.5
         },
         error: {
             padding: 'input',
@@ -103,11 +110,10 @@ export const darkTheme: Theme = {
     ...theme,
     colors: {
         ...theme.colors,
-        mainBackground: colors.black,
-        mainText: colors.white,
-        secondaryBackground: colors.midnightGray,
-        action: colors.purpleLight,
-        border: colors.darkGray,
+        mainBackground: colors.eerieBlack,
+        mainText: colors.pureWhite,
+        action: colors.cultured,
+        border: colors.davysGray,
         shadow: colors.pureWhite
     },
 }

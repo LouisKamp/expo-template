@@ -38,7 +38,7 @@ export const FormScreen: React.FC<Props> = () => {
                     <Box
                         height={lengths.largeBox}
                         width={lengths.largeBox} 
-                        backgroundColor="secondaryBackground"
+                        backgroundColor="mainBackground"
                         borderRadius={lengths.border}
                         shadowColor="shadow"
                         shadowOffset={{
