@@ -4,17 +4,17 @@ import { AppearanceProvider } from 'react-native-appearance'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Provider } from 'react-redux'
 
-import { Navigation, RootNavigator } from '../../navigation'
+import { Navigation } from '../../navigation'
 import { store } from '../../state'
 import { DarkModeHandler } from './DarkModeHandler'
 
-export const Providers: React.VFC = () => (
+export const Providers: React.FC = ({ children }) => (
     <Provider store={store}>
         <AppearanceProvider>
             <SafeAreaProvider>
                 <DarkModeHandler>
                     <Navigation> 
-                        <RootNavigator />
+                        {children}
                     </Navigation>
                 </DarkModeHandler>
                 <StatusBar />
