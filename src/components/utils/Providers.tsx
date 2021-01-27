@@ -8,7 +8,7 @@ import { Navigation, RootNavigator } from '../../navigation'
 import { store } from '../../state'
 import { DarkModeHandler } from './DarkModeHandler'
 
-export const Providers: React.FC = () => (
+export const Providers: React.VFC = () => (
     <Provider store={store}>
         <AppearanceProvider>
             <SafeAreaProvider>

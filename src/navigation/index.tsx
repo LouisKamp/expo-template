@@ -27,7 +27,7 @@ export const Navigation:React.FC = ({ children }) => {
 
 const Stack = createStackNavigator<RootStackParamList>()
 
-export const RootNavigator:React.FC = () => {
+export const RootNavigator:React.VFC = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Root" component={DrawerNavigator} />

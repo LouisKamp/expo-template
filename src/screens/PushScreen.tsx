@@ -21,7 +21,7 @@ type Props = {
     navigation: ScreenNavigationProp
 }
 
-export const PushScreen: React.FC<Props> = ({ route }) => {
+export const PushScreen: React.VFC<Props> = ({ route }) => {
     return (
         <Container>
             <Text variant="subHeader">Push Screen</Text>

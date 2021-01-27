@@ -17,7 +17,7 @@ const schema: SchemaOf<FormValues> = object().shape({
     lastName: string().required('Last name is required'),
 })
 
-export const AddForm: React.FC = () => {
+export const AddForm: React.VFC = () => {
     const {
         handleSubmit, control, reset, errors 
     } = useForm<FormValues>({

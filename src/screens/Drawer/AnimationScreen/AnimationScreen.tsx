@@ -25,7 +25,7 @@ type Props = {
     navigation: ScreenNavigationProp
 }
 
-export const AnimationScreen: React.FC<Props> = ({ route }) => {
+export const AnimationScreen: React.VFC<Props> = ({ route }) => {
 
     // https://docs.swmansion.com/react-native-reanimated/
     

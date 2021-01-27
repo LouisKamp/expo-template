@@ -7,7 +7,7 @@ import { TextInput } from './TextInput'
 
 type Props = React.ComponentProps<typeof TextInput> & {label?: string, errors?: FieldError}
 
-export const FormInput: React.FC<Props> = ({ label, errors, ...rest }) => {
+export const FormInput: React.VFC<Props> = ({ label, errors, ...rest }) => {
     return (
         <Box marginTop="m">
             <Box flexDirection="row" marginBottom="s">

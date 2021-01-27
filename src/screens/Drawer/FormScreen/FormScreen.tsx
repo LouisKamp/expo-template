@@ -25,7 +25,7 @@ type Props = {
     navigation: ScreenNavigationProp
 }
 
-export const FormScreen: React.FC<Props> = () => {
+export const FormScreen: React.VFC<Props> = () => {
     const [modalVisible, setModalVisible] = useState(false)
     return (
         <Container>

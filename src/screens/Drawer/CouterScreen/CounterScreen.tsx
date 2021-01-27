@@ -29,7 +29,7 @@ type Props = {
     navigation: ScreenNavigationProp
 }
 
-export const CounterScreen: React.FC<Props> = ({ navigation }) => {
+export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
     const count = useSelector((state: RootState) => state.count)
     const nav = useNavigation<ScreenNavigationProp>()
     return (

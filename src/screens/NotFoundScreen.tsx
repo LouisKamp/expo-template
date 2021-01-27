@@ -22,7 +22,7 @@ type Props = {
     navigation: ScreenNavigationProp
 }
 
-export const NotFoundScreen: React.FC<Props> = () => {
+export const NotFoundScreen: React.VFC<Props> = () => {
 
     return (
         <Box flex={1} backgroundColor="mainBackground" alignItems="center" justifyContent="center" padding="l">
