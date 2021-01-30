@@ -8,7 +8,7 @@ export const linkingConfiguration = {
                 screens: {
                     Counter: 'counter',
                     Form: 'form',
-                    Animation: 'animation'
+                    /* Animation: 'animation' */
                 },
             },
             Push: {

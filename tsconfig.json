@@ -11,5 +11,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,
-  }
+    "module": "esnext",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

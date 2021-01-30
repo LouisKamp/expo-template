@@ -11,6 +11,6 @@ type DisplayCountProps = {
 export const DisplayCount: React.FunctionComponent<DisplayCountProps> = () => {
     const count = useSelector((state:RootState) => state.count)
     return (
-        <Text>{count}</Text>
+        <Text>The count is: {count}</Text>
     )
 }

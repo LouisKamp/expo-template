@@ -5,6 +5,7 @@ import useCachedResources from './src/hooks/useCachedResources'
 import { RootNavigator } from './src/navigation'
 
 const App = () => {
+
     const isLoadingComplete = useCachedResources()
 
     if (!isLoadingComplete) {

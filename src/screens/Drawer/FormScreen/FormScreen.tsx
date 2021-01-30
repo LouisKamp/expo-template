@@ -18,7 +18,7 @@ type ScreenNavigationProp = CompositeNavigationProp<
     CompositeNavType
 >
 
-type ScreenRouteProp = RouteProp<ParamList, 'Animation'>
+type ScreenRouteProp = RouteProp<ParamList, 'Form'>
 
 type Props = {
     route: ScreenRouteProp

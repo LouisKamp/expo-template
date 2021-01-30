@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar'
 import * as React from 'react'
 import { AppearanceProvider } from 'react-native-appearance'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -17,7 +16,6 @@ export const Providers: React.FC = ({ children }) => (
                         {children}
                     </Navigation>
                 </DarkModeHandler>
-                <StatusBar />
             </SafeAreaProvider>
         </AppearanceProvider>
     </Provider>
