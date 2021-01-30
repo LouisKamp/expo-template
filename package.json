@@ -7,7 +7,8 @@
     "web": "expo start --web",
     "fix": "npx eslint --ext .tsx --ext .ts src/ --fix",
     "eject": "expo eject",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "tsc": "npx tsc --noEmit -w"
   },
   "jest": {
     "preset": "jest-expo",
