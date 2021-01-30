@@ -117,5 +117,3 @@ export const darkTheme: Theme = {
         shadow: colors.pureWhite
     },
 }
-
-export type Theme = typeof theme;
