@@ -11,7 +11,7 @@ export type RootStackParamList = {
 export type DrawerParamList = {
     Counter: undefined
     Form: undefined
-    /* Animation: undefined */
+    Animation: undefined
 }
 
 export type CompositeNavType = CompositeNavigationProp<

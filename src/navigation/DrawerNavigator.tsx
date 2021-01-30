@@ -2,6 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import * as React from 'react'
 
 import { useIsLarge } from '../hooks/useIsLarge'
+import { AnimationScreen } from '../screens/Drawer/AnimationScreen/AnimationScreen'
 // import { AnimationScreen } from '../screens/Drawer/AnimationScreen/AnimationScreen.tsx'
 import { CounterScreen } from '../screens/Drawer/CouterScreen/CounterScreen'
 import { FormScreen } from '../screens/Drawer/FormScreen/FormScreen'
@@ -22,7 +23,7 @@ export const DrawerNavigator = () => {
                 name="Counter"
                 component={CounterScreen}/>
             <Drawer.Screen name="Form" component={FormScreen} />
-            {/* <Drawer.Screen name="Animation" component={AnimationScreen} /> */}
+            <Drawer.Screen name="Animation" component={AnimationScreen} />
         </Drawer.Navigator>
     )
 }
