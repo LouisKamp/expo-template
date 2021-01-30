@@ -21,8 +21,8 @@ export const theme = createTheme({
         xl: lengths.extraLarge,
     },
     breakpoints: {
-        phone: 0,
-        tablet: 768,
+        phone: lengths.phone,
+        tablet: lengths.tablet,
     },
     textVariants: {
         defaults: {
