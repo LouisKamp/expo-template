@@ -12,7 +12,7 @@ export const count = createModel<RootModel>()({
     effects: (dispatch) => ({
         async incrementAsync(payload: number, state) {
             await new Promise((resolve) => setTimeout(resolve, 1000))
-            dispatch.count.increment(payload)
+            dispatch.count.increment(state.count + payload)
         },
     }),
 })
