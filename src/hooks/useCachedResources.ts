@@ -4,6 +4,9 @@ import * as SplashScreen from 'expo-splash-screen'
 import * as React from 'react'
 import { useEffect } from 'react'
 
+/**
+ * Loads resources from assets
+ */
 export default function useCachedResources() {
     const [isLoadingComplete, setLoadingComplete] = React.useState(false)
 

@@ -7,6 +7,9 @@ import { Navigation } from '../../navigation'
 import { store } from '../../state'
 import { DarkModeHandler } from './DarkModeHandler'
 
+/**
+ * A FC to wrap all providers of the app
+ */
 export const Providers: React.FC = ({ children }) => (
     <Provider store={store}>
         <AppearanceProvider>

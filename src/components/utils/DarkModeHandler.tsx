@@ -4,10 +4,10 @@ import { useColorScheme } from 'react-native-appearance'
 
 import { darkTheme, theme } from '../../theme'
 
-type DarkModeHandlerProps = {
-
-}
-
+type DarkModeHandlerProps = {}
+/**
+ * A FC that handles dark mode switching
+ */
 export const DarkModeHandler: React.FC<DarkModeHandlerProps> = ({ children }) => {
     const colorScheme = useColorScheme()
 
