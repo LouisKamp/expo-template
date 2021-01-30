@@ -26,9 +26,9 @@ type Props = SpacingProps<Theme> & LayoutProps<Theme> & BorderProps<Theme> & Bac
         textStyle?: ColorProps<Theme> & TypographyProps<Theme>
     }
 
-export const Button = ({
+export const Button: React.VFC<Props> = ({
     onPress, label, textStyle, ...rest 
-}: Props) => {
+}) => {
     const props = useRestyle(restyleFunctions, rest)
     const propsText = useRestyle(restyleFunctions, textStyle || {})
     return (
