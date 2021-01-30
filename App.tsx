@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Providers } from './src/components/utils/Providers'
+import { Providers } from './src/components/providers'
 import useCachedResources from './src/hooks/useCachedResources'
 import { RootNavigator } from './src/navigation/RootNavigator'
 

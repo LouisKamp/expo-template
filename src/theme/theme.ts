@@ -93,7 +93,7 @@ export const theme = createTheme({
             padding: 'input',
             borderWidth: 1,
             borderColor: 'action',
-            marginTop: 'm',
+            marginVertical: 's',
             borderRadius: lengths.border,
             width: {
                 phone: '100%',
