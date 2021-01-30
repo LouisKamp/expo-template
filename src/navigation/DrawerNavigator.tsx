@@ -3,7 +3,6 @@ import * as React from 'react'
 
 import { useIsLarge } from '../hooks/useIsLarge'
 import { AnimationScreen } from '../screens/Drawer/AnimationScreen/AnimationScreen'
-// import { AnimationScreen } from '../screens/Drawer/AnimationScreen/AnimationScreen.tsx'
 import { CounterScreen } from '../screens/Drawer/CouterScreen/CounterScreen'
 import { FormScreen } from '../screens/Drawer/FormScreen/FormScreen'
 import { DrawerParamList } from '../types/navigationTypes'
