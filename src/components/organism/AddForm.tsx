@@ -19,7 +19,7 @@ const schema: SchemaOf<FormValues> = object().shape({
 export const AddForm: React.VFC = () => {
 
     const { data: formData } = useGetForm()
-    const postForm = usePostForm().mutate
+    const { mutate, isLoading } = usePostForm()
 
     const {
         handleSubmit, control, reset, errors 
@@ -27,7 +27,7 @@ export const AddForm: React.VFC = () => {
         resolver: yupResolver(schema)
     })
 
-    const onSubmit = handleSubmit((data) => postForm(data))
+    const onSubmit = handleSubmit((data) => mutate(data))
   
     return (
         <Box>
@@ -62,14 +62,19 @@ export const AddForm: React.VFC = () => {
                 label="Reset"
                 onPress={() => {
                     reset({
-                        firstName: 'Bill',
-                        lastName: 'Luo'
+                        firstName: '',
+                        lastName: ''
                     })
                 }}/>
 
             <FormButton
                 label="Submit"
                 onPress={onSubmit}/>
+
+            {isLoading && (
+                <Text>Loading</Text>
+            )}
+
             {formData && formData?.length > 0 && (
                 <>
                     <Box backgroundColor="shadow" margin="s" padding="m">
