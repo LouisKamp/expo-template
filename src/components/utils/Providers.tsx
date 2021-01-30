@@ -3,7 +3,7 @@ import { AppearanceProvider } from 'react-native-appearance'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Provider } from 'react-redux'
 
-import { Navigation } from '../../navigation'
+import { NavigationProvider } from '../../navigation/NavigationProvider'
 import { store } from '../../state'
 import { DarkModeHandler } from './DarkModeHandler'
 
@@ -15,9 +15,9 @@ export const Providers: React.FC = ({ children }) => (
         <AppearanceProvider>
             <SafeAreaProvider>
                 <DarkModeHandler>
-                    <Navigation> 
+                    <NavigationProvider> 
                         {children}
-                    </Navigation>
+                    </NavigationProvider>
                 </DarkModeHandler>
             </SafeAreaProvider>
         </AppearanceProvider>
