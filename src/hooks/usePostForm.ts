@@ -7,7 +7,7 @@ export const usePostForm = () => {
     const queryClient = useQueryClient()
 
     return useMutation<FormValues, unknown, FormValues>(async (formValues) => {
-        await new Promise((resolve) => setTimeout(resolve, 1000))
+        await new Promise((resolve) => setTimeout(resolve, 500))
         return formValues
     }, {
         onSuccess(values) {
