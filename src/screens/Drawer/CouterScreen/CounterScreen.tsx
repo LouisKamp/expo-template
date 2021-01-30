@@ -10,8 +10,7 @@ import { useSelector } from 'react-redux'
 import { Box } from '../../../components/atoms/Box'
 import { Container } from '../../../components/atoms/Container'
 import { Text } from '../../../components/atoms/Text'
-import { CountButton } from '../../../components/molecule/CountButton'
-import { DisplayCount } from '../../../components/molecule/DisplayCount'
+import { Counter } from '../../../components/organism/Counter'
 import { RootState } from '../../../state'
 import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
 
@@ -36,8 +35,7 @@ export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
         <Container>
             <Text variant="subHeader">CounterPage</Text>
             <Box marginTop="m">
-                <DisplayCount />
-                <CountButton/>
+                <Counter/>
                 <Box marginVertical="l">
                     {(Platform.OS !== 'web') ? (
                         <TouchableHighlight onPress={() => nav.push('Push', { count: 10 })}>
