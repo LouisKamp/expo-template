@@ -1,6 +1,6 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import {
-    CompositeNavigationProp, Link, RouteProp, useNavigation 
+    CompositeNavigationProp, Link, RouteProp 
 } from '@react-navigation/native'
 import React from 'react'
 import { Platform } from 'react-native'
@@ -30,7 +30,8 @@ type Props = {
 
 export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
     const count = useSelector((state: RootState) => state.count)
-    const nav = useNavigation<ScreenNavigationProp>()
+    /* const nav = useNavigation<ScreenNavigationProp>() */
+    
     return (
         <Container>
             <Text variant="subHeader">CounterPage</Text>
@@ -38,7 +39,7 @@ export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
                 <Counter/>
                 <Box marginVertical="l">
                     {(Platform.OS !== 'web') ? (
-                        <TouchableHighlight onPress={() => nav.push('Push', { count: 10 })}>
+                        <TouchableHighlight onPress={() => navigation.push('Push', { count: 10 })}>
                             <Text variant="link">Link to nowhere</Text>
                         </TouchableHighlight>
                     ) : (
