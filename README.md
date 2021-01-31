@@ -20,6 +20,11 @@ yarn test
 yarn tsc
 ```
 
+## Lint
+```
+yarn lint
+```
+
 ## Styling
 This project uses [restyle](https://github.com/Shopify/restyle) for styling
 
