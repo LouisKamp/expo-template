@@ -33,7 +33,11 @@ export const FormScreen: React.VFC<Props> = () => {
             <AddForm />
 
             <FormButton label="Open modal" onPress={() => setModalVisible(true)} />
-            <Modal transparent visible={modalVisible} animationType="slide" onRequestClose={() => setModalVisible(false)}>
+            <Modal
+                transparent 
+                visible={modalVisible} 
+                animationType="slide"
+                onRequestClose={() => setModalVisible(false)}>
                 <Box justifyContent="center" alignItems="center" flex={1}>
                     <Box
                         height={lengths.largeBox}

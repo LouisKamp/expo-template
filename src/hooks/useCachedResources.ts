@@ -22,6 +22,7 @@ export default function useCachedResources() {
                     'space-mono': require('../../assets/fonts/SpaceMono-Regular.ttf'),
                 })
             } catch (e) {
+                // eslint-disable-next-line no-console
                 console.warn(e)
             } finally {
                 setLoadingComplete(true)
