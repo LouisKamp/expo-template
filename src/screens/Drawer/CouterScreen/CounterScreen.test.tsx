@@ -45,7 +45,7 @@ describe('CounterScreen', () => {
             }) 
         }
 
-        expect(props.navigation.push).toBeCalledTimes(1)
+        expect(props.navigation.push).toBeCalledWith('Push', { count: 10 })
         
     })
 })
