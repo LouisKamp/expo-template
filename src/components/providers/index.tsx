@@ -26,3 +26,17 @@ export const Providers: React.FC = ({ children }) => (
         </Provider>
     </QueryProvider>
 )
+
+export const TestProviders: React.FC = ({ children }) => (
+    <QueryProvider>
+        <Provider store={store}>
+            <SafeAreaProvider initialSafeAreaInsets={{
+                top: 1, left: 2, right: 3, bottom: 4 
+            }}>
+                <ThemeProvider>
+                    {children}
+                </ThemeProvider>
+            </SafeAreaProvider>
+        </Provider>
+    </QueryProvider>
+)
