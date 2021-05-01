@@ -37,7 +37,7 @@ export const AnimationScreen: React.VFC<Props> = () => {
             x.value = ctx.startX + event.translationX
         },
         onEnd: (event, ctx) => {
-            x.value = withSpring(ctx.startX + event.translationX, { velocity: event.velocityX * 1000 })
+            x.value = withSpring(ctx.startX + event.translationX + 1, { velocity: event.velocityX })
         },
     })
 
