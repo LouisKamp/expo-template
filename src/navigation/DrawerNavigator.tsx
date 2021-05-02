@@ -15,7 +15,7 @@ export const DrawerNavigator = () => {
 
     return (
         <Drawer.Navigator
-            initialRouteName="Counter"
+            initialRouteName="Animation"
             drawerType={isLarge ? 'permanent' : 'front'}
             drawerStyle={isLarge ? null : { width: '100%' }}>
             <Drawer.Screen
