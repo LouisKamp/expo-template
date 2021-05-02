@@ -22,7 +22,7 @@ export const AddForm: React.VFC = () => {
     const { mutate, isLoading } = usePostForm()
 
     const {
-        handleSubmit, control, reset, errors 
+        handleSubmit, control, reset 
     } = useForm<FormValues>({
         resolver: yupResolver(schema)
     })
@@ -33,27 +33,27 @@ export const AddForm: React.VFC = () => {
         <Box>
             <Controller
                 control={control}
-                render={({ onChange, onBlur, value, }) => (
+                render={(props) => (
                     <FormInput
                         label="First name"
-                        errors={errors.firstName}
-                        onBlur={onBlur}
-                        onChangeText={(newVal) => onChange(newVal)}
-                        placeholder="First name"
-                        value={value}/>
+                        errors={props.fieldState.error}
+                        onBlur={props.field.onBlur}
+                        onChangeText={props.field.onChange}
+                        value={props.field.value}
+                        placeholder="First name"/>
                 )}
                 defaultValue=""
                 name="firstName"/>
             <Controller
                 control={control}
-                render={({ onChange, onBlur, value }) => (
+                render={(props) => (
                     <FormInput
                         label="Last name"
-                        placeholder="Last name"
-                        errors={errors.lastName}
-                        onBlur={onBlur}
-                        onChangeText={(newVal) => onChange(newVal)}
-                        value={value}/>
+                        errors={props.fieldState.error}
+                        onBlur={props.field.onBlur}
+                        onChangeText={props.field.onChange}
+                        value={props.field.value}
+                        placeholder="Last name"/>
                 )}
                 defaultValue=""
                 name="lastName"/>
@@ -77,7 +77,7 @@ export const AddForm: React.VFC = () => {
 
             {formData && formData?.length > 0 && (
                 <>
-                    <Box backgroundColor="shadow" margin="s" padding="m">
+                    <Box backgroundColor="mainBackground" margin="s" padding="m">
                         <Text variant="subHeader" marginBottom="m">Results:</Text>
                         {formData.map((data) => (
                             <Text marginTop="s">{data.firstName}, {data.lastName}</Text>
