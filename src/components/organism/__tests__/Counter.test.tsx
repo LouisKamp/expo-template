@@ -1,8 +1,7 @@
 import { fireEvent, render } from '@testing-library/react-native'
 import * as React from 'react'
-import { Provider } from 'react-redux'
+import { RecoilRoot } from 'recoil'
 
-import { store } from '../../../state'
 import { CountButton } from '../../molecule/CountButton'
 import { DisplayCount } from '../../molecule/DisplayCount'
 
@@ -10,9 +9,9 @@ describe('Counter', () => {
 
     it('Can display count', () => {
         const { getByText } = render(
-            <Provider store={store}>
+            <RecoilRoot>
                 <DisplayCount />
-            </Provider>
+            </RecoilRoot>
         )
 
         expect(getByText(/The count is/).props.children.join('')).toBe('The count is: 0')
@@ -20,10 +19,10 @@ describe('Counter', () => {
 
     it('Can increase count', () => {
         const { getByText } = render(
-            <Provider store={store}>
+            <RecoilRoot>
                 <DisplayCount />
                 <CountButton />
-            </Provider>
+            </RecoilRoot>
         )
 
         const Button = getByText(/Count/)

@@ -1,7 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useRecoilState } from 'recoil'
 
-import { Dispatch } from '../../state'
+import { countState } from '../../state/countState'
 import { Button } from '../atoms/Button'
 
 type CountButtonProps = {
@@ -9,12 +9,11 @@ type CountButtonProps = {
 }
 
 export const CountButton: React.FunctionComponent<CountButtonProps> = () => {
-
-    const dispatch = useDispatch<Dispatch>()
-
+    const [count, setCount] = useRecoilState(countState)
     const handleOnPress = () => {
-        dispatch.count.increment(2)
+        setCount((c) => c + 2)
     }
+    
     return (
         <Button label="Count" onPress={handleOnPress} />
     )

@@ -1,19 +1,20 @@
 import * as React from 'react'
 import { AppearanceProvider } from 'react-native-appearance'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { Provider } from 'react-redux'
+import {
+    RecoilRoot,
+} from 'recoil'
 
 import { NavigationProvider } from '../../navigation/NavigationProvider'
-import { store } from '../../state'
 import { QueryProvider } from './QueryProvider'
 import { ThemeProvider } from './ThemeProvider'
-
+  
 /**
  * A FC to wrap all providers of the app
  */
 export const Providers: React.FC = ({ children }) => (
     <QueryProvider>
-        <Provider store={store}>
+        <RecoilRoot>
             <AppearanceProvider>
                 <SafeAreaProvider>
                     <ThemeProvider>
@@ -23,13 +24,13 @@ export const Providers: React.FC = ({ children }) => (
                     </ThemeProvider>
                 </SafeAreaProvider>
             </AppearanceProvider>
-        </Provider>
+        </RecoilRoot>
     </QueryProvider>
 )
 
 export const TestProviders: React.FC = ({ children }) => (
     <QueryProvider>
-        <Provider store={store}>
+        <RecoilRoot>
             <SafeAreaProvider initialSafeAreaInsets={{
                 top: 1, left: 2, right: 3, bottom: 4 
             }}>
@@ -37,6 +38,6 @@ export const TestProviders: React.FC = ({ children }) => (
                     {children}
                 </ThemeProvider>
             </SafeAreaProvider>
-        </Provider>
+        </RecoilRoot>
     </QueryProvider>
 )

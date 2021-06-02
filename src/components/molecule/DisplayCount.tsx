@@ -1,7 +1,7 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useRecoilState } from 'recoil'
 
-import { RootState } from '../../state'
+import { countState } from '../../state/countState'
 import { Text } from '../atoms/Text'
 
 type DisplayCountProps = {
@@ -9,7 +9,7 @@ type DisplayCountProps = {
 }
 
 export const DisplayCount: React.FunctionComponent<DisplayCountProps> = () => {
-    const count = useSelector((state:RootState) => state.count)
+    const [count, setCount] = useRecoilState(countState)
     return (
         <Text>The count is: {count}</Text>
     )
