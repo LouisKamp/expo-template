@@ -1,4 +1,4 @@
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as React from 'react'
 
 import { NotFoundScreen } from '../screens/NotFoundScreen'
@@ -6,7 +6,7 @@ import { PushScreen } from '../screens/PushScreen'
 import { RootStackParamList } from '../types/navigationTypes'
 import { DrawerNavigator } from './DrawerNavigator'
 
-const Stack = createStackNavigator<RootStackParamList>()
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export const RootNavigator:React.VFC = () => {
     return (
