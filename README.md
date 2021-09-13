@@ -29,7 +29,7 @@ yarn lint
 This project uses [restyle](https://github.com/Shopify/restyle) for styling
 
 ## State
-This project uses [rematch](https://rematch.netlify.app/#/) for state-management
+This project uses [rematch](https://rematchjs.org) for state-management
 
 ## Animations
 This project uses [reanimated 2](https://docs.swmansion.com/react-native-reanimated/) for animations

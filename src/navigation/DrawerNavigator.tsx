@@ -16,8 +16,11 @@ export const DrawerNavigator = () => {
     return (
         <Drawer.Navigator
             initialRouteName="Animation"
-            drawerType={isLarge ? 'permanent' : 'front'}
-            drawerStyle={isLarge ? null : { width: '100%' }}>
+            screenOptions={{
+                drawerType: isLarge ? 'permanent' : 'front',
+                drawerStyle: isLarge ? null : { width: '100%' },
+                headerShown: false
+            }}>
             <Drawer.Screen
                 name="Counter"
                 component={CounterScreen}/>

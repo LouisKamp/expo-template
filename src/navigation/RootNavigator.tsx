@@ -10,10 +10,12 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export const RootNavigator:React.VFC = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Root" component={DrawerNavigator} />
-            <Stack.Screen name="Push" component={PushScreen} />
-            <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        <Stack.Navigator>
+            <Stack.Group screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Root" component={DrawerNavigator} />
+                <Stack.Screen name="Push" component={PushScreen} />
+                <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+            </Stack.Group>
         </Stack.Navigator>
     )
 }
