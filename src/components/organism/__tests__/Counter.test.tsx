@@ -25,7 +25,7 @@ describe('Counter', () => {
             </RecoilRoot>
         )
 
-        const Button = getByText(/Count/)
+        const Button = getByText(/Press me/)
         fireEvent(Button, 'onPress')
 
         expect(getByText(/The count is/).props.children.join('')).toBe('The count is: 2')

@@ -5,7 +5,7 @@ import { countState } from '../../state/countState'
 import { Button } from '../atoms/Button'
 
 type CountButtonProps = {
-    
+
 }
 
 export const CountButton: React.FunctionComponent<CountButtonProps> = () => {
@@ -13,8 +13,8 @@ export const CountButton: React.FunctionComponent<CountButtonProps> = () => {
     const handleOnPress = () => {
         setCount((c) => c + 2)
     }
-    
+
     return (
-        <Button label="Count" onPress={handleOnPress} />
+        <Button label="Press me" onPress={handleOnPress} />
     )
 }

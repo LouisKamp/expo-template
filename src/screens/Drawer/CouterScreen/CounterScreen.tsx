@@ -1,6 +1,6 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import {
-    CompositeNavigationProp, Link, RouteProp 
+    CompositeNavigationProp, Link, RouteProp
 } from '@react-navigation/native'
 import React from 'react'
 import { Platform } from 'react-native'
@@ -31,15 +31,15 @@ type Props = {
 export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
     const [count, setCount] = useRecoilState(countState)
     /* const nav = useNavigation<ScreenNavigationProp>() */
-    
+
     return (
         <Container>
             <Text variant="subHeader">CounterPage</Text>
             <Box marginTop="m">
-                <Counter/>
+                <Counter />
                 <Box marginVertical="l">
                     {(Platform.OS !== 'web') ? (
-                        <TouchableHighlight onPress={() => navigation.push('Push', { count: 10 })}>
+                        <TouchableHighlight onPress={() => navigation.push('Push', { count })}>
                             <Text variant="link">Link to nowhere</Text>
                         </TouchableHighlight>
                     ) : (

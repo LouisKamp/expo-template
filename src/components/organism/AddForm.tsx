@@ -80,7 +80,12 @@ export const AddForm: React.VFC = () => {
                     <Box backgroundColor="mainBackground" margin="s" padding="m">
                         <Text variant="subHeader" marginBottom="m">Results:</Text>
                         {formData.map((data) => (
-                            <Text marginTop="s">{data.firstName}, {data.lastName}</Text>
+                            <Text marginTop="s">
+                                {data.firstName}
+                                , 
+                                {' '}
+                                {data.lastName}
+                            </Text>
                         ))}
                     </Box>
                 </>

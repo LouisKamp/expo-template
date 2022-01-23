@@ -1,5 +1,5 @@
 import {
-    act, fireEvent, render, waitFor 
+    act, fireEvent, render, waitFor
 } from '@testing-library/react-native'
 import * as React from 'react'
 
@@ -42,10 +42,10 @@ describe('CounterScreen', () => {
         if (link) {
             act(() => {
                 fireEvent(link, 'onPress')
-            }) 
+            })
         }
 
-        expect(props.navigation.push).toBeCalledWith('Push', { count: 10 })
-        
+        expect(props.navigation.push).toBeCalledWith('Push', { count: 0 })
+
     })
 })
