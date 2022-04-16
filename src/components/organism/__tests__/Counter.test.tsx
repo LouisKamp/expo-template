@@ -21,6 +21,7 @@ describe('Counter', () => {
         const { getByText } = render(
             <RecoilRoot>
                 <DisplayCount />
+
                 <CountButton />
             </RecoilRoot>
         )

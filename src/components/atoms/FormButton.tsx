@@ -4,6 +4,6 @@ import { Theme } from '../../theme'
 import { Button } from './Button'
 
 export const FormButton = createRestyleComponent<
-  VariantProps<Theme, 'formButtonVariants'> & React.ComponentProps<typeof Button>,
-  Theme
+VariantProps<Theme, 'formButtonVariants'> & React.ComponentProps<typeof Button>,
+Theme
 >([createVariant({ themeKey: 'formButtonVariants' })], Button)

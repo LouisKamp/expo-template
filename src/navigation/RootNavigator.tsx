@@ -8,13 +8,15 @@ import { DrawerNavigator } from './DrawerNavigator'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
-export const RootNavigator:React.VFC = () => {
+export const RootNavigator: React.VFC = () => {
     return (
         <Stack.Navigator>
             <Stack.Group screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Root" component={DrawerNavigator} />
-                <Stack.Screen name="Push" component={PushScreen} />
-                <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+                <Stack.Screen component={DrawerNavigator} name="Root" />
+
+                <Stack.Screen component={PushScreen} name="Push" />
+
+                <Stack.Screen component={NotFoundScreen} name="NotFound" options={{ title: 'Oops!' }} />
             </Stack.Group>
         </Stack.Navigator>
     )

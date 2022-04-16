@@ -17,8 +17,8 @@ import { CompositeNavType, DrawerParamList } from '../../../types/navigationType
 type ParamList = DrawerParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<ParamList, 'Counter'>,
-    CompositeNavType
+DrawerNavigationProp<ParamList, 'Counter'>,
+CompositeNavType
 >
 
 type ScreenRouteProp = RouteProp<ParamList, 'Counter'>
@@ -35,22 +35,25 @@ export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
     return (
         <Container>
             <Text variant="subHeader">CounterPage</Text>
+
             <Box marginTop="m">
                 <Counter />
+
                 <Box marginVertical="l">
                     {(Platform.OS !== 'web') ? (
                         <TouchableHighlight onPress={() => navigation.push('Push', { count })}>
                             <Text variant="link">Link to nowhere</Text>
                         </TouchableHighlight>
                     ) : (
-                        <>
+                        <React.Fragment>
                             <Link to={`/push/${count}`}>
                                 <Text variant="link">Link to push</Text>
                             </Link>
+
                             <Link to="/nowhere">
                                 <Text variant="link">Link to nowhere</Text>
                             </Link>
-                        </>
+                        </React.Fragment>
                     )}
                 </Box>
             </Box>

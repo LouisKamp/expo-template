@@ -9,8 +9,8 @@ import { CompositeNavType, RootStackParamList } from '../types/navigationTypes'
 type ParamList = RootStackParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<ParamList, 'NotFound'>,
-    CompositeNavType
+DrawerNavigationProp<ParamList, 'NotFound'>,
+CompositeNavType
 >
 
 type ScreenRouteProp = RouteProp<ParamList, 'NotFound'>
@@ -23,8 +23,9 @@ type Props = {
 export const NotFoundScreen: React.VFC<Props> = () => {
 
     return (
-        <Box flex={1} backgroundColor="mainBackground" alignItems="center" justifyContent="center" padding="l">
+        <Box alignItems="center" backgroundColor="mainBackground" flex={1} justifyContent="center" padding="l">
             <Text variant="subHeader">This screen doesn&apos;t exist.</Text>
+
             <Box marginTop="l">
                 <Link to="/counter">
                     <Text variant="link">Go back to home</Text>

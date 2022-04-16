@@ -15,6 +15,6 @@ export type DrawerParamList = {
 }
 
 export type CompositeNavType = CompositeNavigationProp<
-        NativeStackNavigationProp<RootStackParamList>,
-        DrawerNavigationProp<DrawerParamList>
-    >
+NativeStackNavigationProp<RootStackParamList>,
+DrawerNavigationProp<DrawerParamList>
+>

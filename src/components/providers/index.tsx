@@ -33,7 +33,8 @@ export const TestProviders: React.FC = ({ children }) => (
         <RecoilRoot>
             <SafeAreaProvider initialSafeAreaInsets={{
                 top: 1, left: 2, right: 3, bottom: 4 
-            }}>
+            }}
+            >
                 <ThemeProvider>
                     {children}
                 </ThemeProvider>

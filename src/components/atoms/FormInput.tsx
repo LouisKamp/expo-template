@@ -5,7 +5,7 @@ import { Box } from './Box'
 import { Text } from './Text'
 import { TextInput } from './TextInput'
 
-type Props = React.ComponentProps<typeof TextInput> & {label?: string, errors?: FieldError}
+type Props = React.ComponentProps<typeof TextInput> & {label?: string; errors?: FieldError}
 
 export const FormInput: React.VFC<Props> = ({ label, errors, ...rest }) => {
     return (
@@ -17,6 +17,7 @@ export const FormInput: React.VFC<Props> = ({ label, errors, ...rest }) => {
                     <Text>{label}</Text>
                 )}
             </Box>
+
             <TextInput variant={errors ? 'error' : 'box'} {...rest} />
         </Box>
     ) 

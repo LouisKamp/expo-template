@@ -16,8 +16,8 @@ import { CompositeNavType, DrawerParamList } from '../../../types/navigationType
 type ParamList = DrawerParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<ParamList, 'Animation'>,
-    CompositeNavType
+DrawerNavigationProp<ParamList, 'Animation'>,
+CompositeNavType
 >
 
 type ScreenRouteProp = RouteProp<ParamList, 'Animation'>
@@ -37,7 +37,7 @@ export const AnimationScreen: React.VFC<Props> = () => {
 
     const { height, width } = Dimensions.get('screen')
 
-    const gestureHandler = useAnimatedGestureHandler<PanGestureHandlerGestureEvent, {startX: number, startY: number}>({
+    const gestureHandler = useAnimatedGestureHandler<PanGestureHandlerGestureEvent, {startX: number; startY: number}>({
         onStart: (_, ctx) => {
             ctx.startX = x.value
             ctx.startY = y.value
@@ -99,7 +99,8 @@ export const AnimationScreen: React.VFC<Props> = () => {
             <PanGestureHandler onGestureEvent={gestureHandler}>
                 <Animated.View style={[{
                     height: 40, width: 40, backgroundColor: 'blue'
-                }, animatedStyle]} />
+                }, animatedStyle]}
+                />
             </PanGestureHandler>
         </Container>
     )

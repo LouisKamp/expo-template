@@ -7,6 +7,6 @@ import {
 import { Theme } from '../../theme'
 
 export const TextInput = createRestyleComponent<
-  VariantProps<Theme, 'inputVariants'> & React.ComponentProps<typeof BaseTextInput>,
-  Theme
+VariantProps<Theme, 'inputVariants'> & React.ComponentProps<typeof BaseTextInput>,
+Theme
 >([createVariant({ themeKey: 'inputVariants' })], BaseTextInput)

@@ -33,30 +33,35 @@ export const AddForm: React.VFC = () => {
         <Box>
             <Controller
                 control={control}
+                defaultValue=""
+                name="firstName"
                 render={(props) => (
                     <FormInput
-                        label="First name"
                         errors={props.fieldState.error}
+                        label="First name"
+                        placeholder="First name"
+                        value={props.field.value}
                         onBlur={props.field.onBlur}
                         onChangeText={props.field.onChange}
-                        value={props.field.value}
-                        placeholder="First name"/>
+                    />
                 )}
-                defaultValue=""
-                name="firstName"/>
+            />
+
             <Controller
                 control={control}
+                defaultValue=""
+                name="lastName"
                 render={(props) => (
                     <FormInput
-                        label="Last name"
                         errors={props.fieldState.error}
+                        label="Last name"
+                        placeholder="Last name"
+                        value={props.field.value}
                         onBlur={props.field.onBlur}
                         onChangeText={props.field.onChange}
-                        value={props.field.value}
-                        placeholder="Last name"/>
+                    />
                 )}
-                defaultValue=""
-                name="lastName"/>
+            />
 
             <FormButton
                 label="Reset"
@@ -65,30 +70,33 @@ export const AddForm: React.VFC = () => {
                         firstName: '',
                         lastName: ''
                     })
-                }}/>
+                }}
+            />
 
             <FormButton
                 label="Submit"
-                onPress={onSubmit}/>
+                onPress={onSubmit}
+            />
 
             {isLoading && (
                 <Text>Loading</Text>
             )}
 
-            {formData && formData?.length > 0 && (
-                <>
-                    <Box backgroundColor="mainBackground" margin="s" padding="m">
-                        <Text variant="subHeader" marginBottom="m">Results:</Text>
-                        {formData.map((data) => (
-                            <Text marginTop="s">
-                                {data.firstName}
+            {formData && formData.length > 0 && (
+                <Box backgroundColor="mainBackground" margin="s" padding="m">
+                    <Text marginBottom="m" variant="subHeader">Results:</Text>
+
+                    {formData.map((data) => (
+                        <Text marginTop="s">
+                            {data.firstName}
                                 , 
-                                {' '}
-                                {data.lastName}
-                            </Text>
-                        ))}
-                    </Box>
-                </>
+
+                            {' '}
+
+                            {data.lastName}
+                        </Text>
+                    ))}
+                </Box>
             )}
         </Box>
     )

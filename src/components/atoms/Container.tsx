@@ -13,7 +13,8 @@ export const Container: React.FC = ({ children }) => {
             paddingBottom: bottom,
             paddingRight: right || 24,
             paddingLeft: left || 24 
-        }}>
+        }}
+        >
             {children}
         </View>
     )

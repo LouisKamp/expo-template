@@ -20,12 +20,16 @@ export const DrawerNavigator = () => {
                 drawerType: isLarge ? 'permanent' : 'front',
                 drawerStyle: isLarge ? null : { width: '100%' },
                 headerShown: false
-            }}>
+            }}
+        >
             <Drawer.Screen
+                component={CounterScreen}
                 name="Counter"
-                component={CounterScreen}/>
-            <Drawer.Screen name="Form" component={FormScreen} />
-            <Drawer.Screen name="Animation" component={AnimationScreen} />
+            />
+
+            <Drawer.Screen component={FormScreen} name="Form" />
+
+            <Drawer.Screen component={AnimationScreen} name="Animation" />
         </Drawer.Navigator>
     )
 }

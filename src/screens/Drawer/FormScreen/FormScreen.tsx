@@ -10,8 +10,8 @@ import { CompositeNavType, DrawerParamList } from '../../../types/navigationType
 type ParamList = DrawerParamList
 
 type ScreenNavigationProp = CompositeNavigationProp<
-    DrawerNavigationProp<ParamList, 'Form'>,
-    CompositeNavType
+DrawerNavigationProp<ParamList, 'Form'>,
+CompositeNavType
 >
 
 type ScreenRouteProp = RouteProp<ParamList, 'Form'>
@@ -25,6 +25,7 @@ export const FormScreen: React.VFC<Props> = () => {
     return (
         <Container>
             <Text variant="subHeader">FormScreen</Text>
+
             <AddForm />
         </Container>
     )

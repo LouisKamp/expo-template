@@ -24,7 +24,7 @@ const restyleFunctionsText = [color, typography]
 
 
 type Props = SpacingProps<Theme> & LayoutProps<Theme> & BorderProps<Theme> & BackgroundColorProps<Theme> & {
-    onPress: () => void
+    onPress(): void
     label: string
     textStyle?: ColorProps<Theme> & TypographyProps<Theme>
 }
