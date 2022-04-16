@@ -14,17 +14,23 @@ type ScreenNavigationProp = CompositeNavigationProp<
     CompositeNavType
 >
 
-type ScreenRouteProp = RouteProp<ParamList, 'Push'>
+type ScreenRouteProp = RouteProp<ParamList, 'Push' >
 
 type Props = {
     route: ScreenRouteProp
     navigation: ScreenNavigationProp
 }
 
+
+
 export const PushScreen: React.VFC<Props> = ({ route }) => {
     return (
         <Container>
             <Text variant="subHeader">Push Screen</Text>
+
+
+
+            <Box marginBottom="input" />
             <Box marginTop="m">
                 <Text>{route.params.count}</Text>
             </Box>
