@@ -11,7 +11,7 @@ import Animated, {
 } from 'react-native-reanimated'
 
 import { Container } from '../../../components/atoms/Container'
-import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
+import { CompositeNavType, DrawerParamList } from '../../../types/NavigationTypes'
 
 type ParamList = DrawerParamList
 

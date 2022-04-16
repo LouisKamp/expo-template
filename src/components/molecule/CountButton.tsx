@@ -1,15 +1,13 @@
 import React from 'react'
-import { useRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 
 import { countState } from '../../state/countState'
 import { Button } from '../atoms/Button'
 
-type CountButtonProps = {
+type CountButtonProps = unknown
 
-}
-
-export const CountButton: React.FunctionComponent<CountButtonProps> = () => {
-    const [count, setCount] = useRecoilState(countState)
+export const CountButton: React.VFC<CountButtonProps> = () => {
+    const setCount = useSetRecoilState(countState)
     const handleOnPress = () => {
         setCount((c) => c + 2)
     }

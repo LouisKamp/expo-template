@@ -5,7 +5,7 @@ import { useIsLarge } from '../hooks/useIsLarge'
 import { AnimationScreen } from '../screens/Drawer/AnimationScreen/AnimationScreen'
 import { CounterScreen } from '../screens/Drawer/CouterScreen/CounterScreen'
 import { FormScreen } from '../screens/Drawer/FormScreen/FormScreen'
-import { DrawerParamList } from '../types/navigationTypes'
+import { DrawerParamList } from '../types/NavigationTypes'
 
 const Drawer = createDrawerNavigator<DrawerParamList>()
 

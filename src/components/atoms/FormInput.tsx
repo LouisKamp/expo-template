@@ -12,9 +12,13 @@ export const FormInput: React.VFC<Props> = ({ label, errors, ...rest }) => {
         <Box marginTop="m">
             <Box flexDirection="row" marginBottom="s">
                 {errors ? (
-                    <Text variant="error">{errors.message}</Text>
+                    <Text variant="error">
+                        {errors.message}
+                    </Text>
                 ) : (
-                    <Text>{label}</Text>
+                    <Text>
+                        {label}
+                    </Text>
                 )}
             </Box>
 

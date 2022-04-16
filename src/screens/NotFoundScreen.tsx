@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { Box } from '../components/atoms/Box'
 import { Text } from '../components/atoms/Text'
-import { CompositeNavType, RootStackParamList } from '../types/navigationTypes'
+import { CompositeNavType, RootStackParamList } from '../types/NavigationTypes'
 
 type ParamList = RootStackParamList
 

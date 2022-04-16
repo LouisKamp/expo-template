@@ -33,7 +33,9 @@ export const PushScreen: React.VFC<Props> = ({ route }) => {
             <Box marginBottom="input" />
 
             <Box marginTop="m">
-                <Text>{route.params.count}</Text>
+                <Text>
+                    {route.params.count}
+                </Text>
             </Box>
         </Container>
     )

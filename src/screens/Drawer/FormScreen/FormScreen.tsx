@@ -5,7 +5,7 @@ import React from 'react'
 import { Container } from '../../../components/atoms/Container'
 import { Text } from '../../../components/atoms/Text'
 import { AddForm } from '../../../components/organism/AddForm'
-import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
+import { CompositeNavType, DrawerParamList } from '../../../types/NavigationTypes'
 
 type ParamList = DrawerParamList
 

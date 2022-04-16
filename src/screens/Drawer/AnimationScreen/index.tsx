@@ -1,1 +1,1 @@
-/* export * from './AnimationScreen.tsx' */
+export * from './AnimationScreen'

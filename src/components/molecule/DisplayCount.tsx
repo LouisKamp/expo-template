@@ -1,19 +1,16 @@
 import React from 'react'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 
 import { countState } from '../../state/countState'
 import { Text } from '../atoms/Text'
 
-type DisplayCountProps = {
-    
-}
+type DisplayCountProps = unknown
 
-export const DisplayCount: React.FunctionComponent<DisplayCountProps> = () => {
-    const [count, setCount] = useRecoilState(countState)
+export const DisplayCount: React.VFC<DisplayCountProps> = () => {
+    const count = useRecoilValue(countState)
     return (
         <Text>
-            The count is:
-            {count}
+            {`The count is: ${count}`}
         </Text>
     )
 }

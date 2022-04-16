@@ -4,7 +4,7 @@ import { useColorScheme } from 'react-native-appearance'
 
 import { darkTheme, theme } from '../../theme'
 
-type ThemeProviderProps = {}
+type ThemeProviderProps = unknown
 /**
  * A FC that handles dark mode switching
  */

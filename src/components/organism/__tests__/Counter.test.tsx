@@ -14,7 +14,7 @@ describe('Counter', () => {
             </RecoilRoot>
         )
 
-        expect(getByText(/The count is/).props.children.join('')).toBe('The count is: 0')
+        expect(getByText(/The count is/).props.children).toBe('The count is: 0')
     })
 
     it('Can increase count', () => {
@@ -29,7 +29,7 @@ describe('Counter', () => {
         const Button = getByText(/Press me/)
         fireEvent(Button, 'onPress')
 
-        expect(getByText(/The count is/).props.children.join('')).toBe('The count is: 2')
+        expect(getByText(/The count is/).props.children).toBe('The count is: 2')
 
     })
 })

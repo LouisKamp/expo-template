@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import { NotFoundScreen } from '../screens/NotFoundScreen'
 import { PushScreen } from '../screens/PushScreen'
-import { RootStackParamList } from '../types/navigationTypes'
+import { RootStackParamList } from '../types/NavigationTypes'
 import { DrawerNavigator } from './DrawerNavigator'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()

@@ -5588,9 +5588,9 @@ escodegen@^2.0.0:
     source-map "~0.6.1"
 
 eslint-config-louiskamp@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-louiskamp/-/eslint-config-louiskamp-2.0.2.tgz#a6c2628c5ff47b2c1578e4f01adea7dcb13b6146"
-  integrity sha512-l98enKgAnv98HFbHFGdgdi/alSennNsUcDaRlSR9BNQ/3jykygR7nyffncKe0tjuOWKP6sk7KrmDxsk4fxYeBA==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-louiskamp/-/eslint-config-louiskamp-2.0.3.tgz#df8211a326c9854da387161fce2ca1f43dae0bd2"
+  integrity sha512-GdOonKfx+Jgf+Pjgt9O0gj/0CbsR6Chuvozbgiw+HavEMx5bIbLu+qXnLj/eUxRu77obpv/SVSk7GULxff341Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.16.0"
     "@typescript-eslint/parser" "^5.19.0"

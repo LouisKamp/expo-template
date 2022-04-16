@@ -36,7 +36,9 @@ export const Button: React.VFC<Props> = ({
     const propsText = useRestyle(restyleFunctionsText, textStyle || {})
     return (
         <TouchableOpacity onPress={onPress} {...props}>
-            <Text variant="buttonLabel" {...propsText}>{label}</Text>
+            <Text variant="buttonLabel" {...propsText}>
+                {label}
+            </Text>
         </TouchableOpacity>
     )
 }

@@ -5,14 +5,14 @@ import {
 import React from 'react'
 import { Platform } from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 
 import { Box } from '../../../components/atoms/Box'
 import { Container } from '../../../components/atoms/Container'
 import { Text } from '../../../components/atoms/Text'
 import { Counter } from '../../../components/organism/Counter'
 import { countState } from '../../../state/countState'
-import { CompositeNavType, DrawerParamList } from '../../../types/navigationTypes'
+import { CompositeNavType, DrawerParamList } from '../../../types/NavigationTypes'
 
 type ParamList = DrawerParamList
 
@@ -29,7 +29,7 @@ type Props = {
 }
 
 export const CounterScreen: React.VFC<Props> = ({ navigation }) => {
-    const [count, setCount] = useRecoilState(countState)
+    const count = useRecoilValue(countState)
     /* const nav = useNavigation<ScreenNavigationProp>() */
 
     return (
